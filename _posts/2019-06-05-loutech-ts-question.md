@@ -111,6 +111,6 @@ let x = {
 only_string_props(x, 'alpha') // works
 only_string_props(x, '123') // error
 ```
-[Run in TypeScript Playground(https://www.typescriptlang.org/play/#src=type%20PickOfType%3CT%2C%20P%3E%20%3D%20Pick%3CT%2C%20Extract%3Ckeyof%20T%2C%20P%3E%3E%3B%0D%0A%0D%0Afunction%20only_string_props%3CT%2C%20K%20extends%20keyof%20PickOfType%3CT%2C%20string%3E%3E(obj%3A%20T%2C%20key%3A%20K)%20%7B%0D%0A%20%20%20%20%2F%2F%20...%0D%0A%7D%0D%0A%0D%0Alet%20x%20%3D%20%7B%0D%0A%20%20%20%20alpha%3A%20'a'%2C%0D%0A%20%20%20%20beta%3A%20'b'%2C%0D%0A%20%20%20%20123%3A%20456%0D%0A%7D%3B%0D%0A%0D%0Aonly_string_props(x%2C%20'alpha')%20%2F%2F%20works%0D%0Aonly_string_props(x%2C%20'123')%20%2F%2F%20error)
+[Run in TypeScript Playground](https://www.typescriptlang.org/play/#src=type%20PickOfType%3CT%2C%20P%3E%20%3D%20Pick%3CT%2C%20Extract%3Ckeyof%20T%2C%20P%3E%3E%3B%0D%0A%0D%0Afunction%20only_string_props%3CT%2C%20K%20extends%20keyof%20PickOfType%3CT%2C%20string%3E%3E(obj%3A%20T%2C%20key%3A%20K)%20%7B%0D%0A%20%20%20%20%2F%2F%20...%0D%0A%7D%0D%0A%0D%0Alet%20x%20%3D%20%7B%0D%0A%20%20%20%20alpha%3A%20'a'%2C%0D%0A%20%20%20%20beta%3A%20'b'%2C%0D%0A%20%20%20%20123%3A%20456%0D%0A%7D%3B%0D%0A%0D%0Aonly_string_props(x%2C%20'alpha')%20%2F%2F%20works%0D%0Aonly_string_props(x%2C%20'123')%20%2F%2F%20error)
 
 Pay special attention to those repeated `keyof` expressions, that's the secret sauce here.
